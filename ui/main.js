@@ -23,10 +23,9 @@ button.onclick= function(){
     
 };
 
-var nameInput = document.getElementById('name');
 var submitbut = document.getElementById('submit_but');
 
-submitbut.onclick= function(){
+submitbut.onclick= function () {
     
     var request = new XMLHttpRequest();
     
@@ -49,6 +48,8 @@ submitbut.onclick= function(){
         }
     };
     
+    var nameInput = document.getElementById('name');
+    var name= nameInput.value;
     request.open('GET', 'http://wasibtariq95.imad.hasura-app.io/submit-name?name=' +name,true);
     request.send(null);
     
