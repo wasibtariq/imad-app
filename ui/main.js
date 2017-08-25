@@ -22,3 +22,18 @@ button.onclick= function(){
     request.send(null);
     
 };
+
+var nameInput = document.getElementById('name');
+var submitbut = document.getElementById('submit_but');
+
+submitbut.onclick = function(){
+    
+    var names=[name1,name2];
+    var list='';
+    for(var i=0;i<names.length;i++)
+    {
+        list+= <li> +names[i]+ </li>;
+    }
+    var ul=document.getElementById('namelist');
+    ul.innerHTML=list;
+}
